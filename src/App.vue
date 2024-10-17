@@ -1,18 +1,14 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import { testInterFace } from './api';
+const cliclBtn = async () => {
+  const result = await testInterFace();
+  console.log(result)
+}
+
 </script>
 
 <template>
-  <div>
-    <a href="https://vitejs.dev" target="_blank">
-      <img src="/vite.svg" class="logo" alt="Vite logo" />
-    </a>
-    <a href="https://vuejs.org/" target="_blank">
-      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
-    </a>
-  </div>
-  <button class="bg-indigo-500">demo</button>
-  <HelloWorld msg="Vite + Vue" />
+  <button class="bg-indigo-500 text-zinc-50" @click="cliclBtn">demo</button>
 </template>
 
 <style scoped>

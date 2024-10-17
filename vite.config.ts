@@ -8,6 +8,14 @@ export default defineConfig({
   resolve: {
     alias: {
       "@": join(__dirname, "src")
+    },
+  },
+  server: {
+    proxy: {
+      "/api": {
+        target: "http://localhost:3397/",
+        rewrite: (path) => path.replace(/^\/api/, 'http://localhost:3397/')
+      }
     }
   }
 })

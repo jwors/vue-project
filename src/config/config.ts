@@ -15,14 +15,7 @@ type ConfigType = {
 }
 const config = {
 	dev: {
-		oaAppUrl: 'https://subsidy.sharing8.cn',
-		reamId: 'station',
 		apiUrl: '/api',
-		ssoV2Config: {
-			ssoUrl: '//sso.sharing8.cn',
-			hydraHost: 'http://192.168.110.21:32544',
-			ssoClientId: 'sharing-plasma-oa',
-		},
 	},
 
 }
